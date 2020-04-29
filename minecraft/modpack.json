@@ -1,0 +1,29 @@
+{
+  "ForgeVersion": "1.12.2-forge1.12.2-14.23.5.2847",
+  "ModSources": [
+    "https://media.forgecdn.net/files/2747/63/appliedenergistics2-rv6-stable-7.jar",
+    "https://media.forgecdn.net/files/2518/667/Baubles-1.12-1.5.2.jar",
+    "https://media.forgecdn.net/files/2714/279/BiomesOPlenty-1.12.2-7.0.1.2440-universal.jar",
+    "https://media.forgecdn.net/files/2713/291/BloodMagic-1.12.2-2.4.1-103.jar",
+    "https://media.forgecdn.net/files/2915/375/Chisel-MC1.12.2-1.0.2.45.jar",
+    "https://media.forgecdn.net/files/2858/816/EnderIO-1.12.2-5.1.55.jar",
+    "https://media.forgecdn.net/files/2822/401/EnderCore-1.12.2-0.5.73.jar",
+    "https://media.forgecdn.net/files/2678/374/extrautils2-1.12-1.9.9.jar",
+    "https://media.forgecdn.net/files/2722/271/ExtremeReactors-1.12.2-0.4.5.67.jar",
+    "https://media.forgecdn.net/files/2645/992/Guide-API-1.12-2.1.8-63.jar",
+    "https://media.forgecdn.net/files/2799/143/ImmersiveEngineering-0.12-92.jar",
+    "https://media.forgecdn.net/files/2721/36/ironchest-1.12.2-7.0.67.844.jar",
+    "https://media.forgecdn.net/files/2713/386/Mantle-1.12-1.3.3.55.jar",
+    "https://media.forgecdn.net/files/2835/175/Mekanism-1.12.2-9.8.3.390.jar",
+    "https://media.forgecdn.net/files/2894/502/Metallurgy-4-Reforged-0.3.3.jar",
+    "https://media.forgecdn.net/files/2753/244/mystcraft-1.12.2-0.13.7.04.jar",
+    "https://media.forgecdn.net/files/2699/56/OpenBlocks-1.12.2-1.8.1.jar",
+    "https://media.forgecdn.net/files/2699/55/OpenModsLib-1.12.2-0.12.2.jar",
+    "https://media.forgecdn.net/files/2920/436/RedstoneFlux-1.12-2.1.1.1-universal.jar",
+    "https://media.forgecdn.net/files/2789/696/SimplyJetpacks2-1.12.2-2.2.14.67.jar",
+    "https://media.forgecdn.net/files/2629/23/Thaumcraft-1.12.2-6.1.BETA26.jar",
+    "https://media.forgecdn.net/files/2630/860/TinkerToolLeveling-1.12.2-1.1.0.jar",
+    "https://media.forgecdn.net/files/2902/483/TConstruct-1.12.2-2.13.0.183.jar",
+    "https://media.forgecdn.net/files/2670/570/zerocore-1.12.2-0.1.2.8.jar"
+  ]
+}
