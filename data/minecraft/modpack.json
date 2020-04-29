@@ -26,5 +26,5 @@
     "https://media.forgecdn.net/files/2902/483/TConstruct-1.12.2-2.13.0.183.jar",
     "https://media.forgecdn.net/files/2670/570/zerocore-1.12.2-0.1.2.8.jar"
   ],
-  "ForgeInstaller": "http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html"
+  "ForgeInstaller": "https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html"
 }
