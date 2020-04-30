@@ -25,8 +25,9 @@
     "https://media.forgecdn.net/files/2630/860/TinkerToolLeveling-1.12.2-1.1.0.jar",
     "https://media.forgecdn.net/files/2902/483/TConstruct-1.12.2-2.13.0.183.jar",
     "https://media.forgecdn.net/files/2670/570/zerocore-1.12.2-0.1.2.8.jar",
-	"https://media.forgecdn.net/files/2845/668/foamfix-0.10.10-1.12.2.jar",
-	"https://media.forgecdn.net/files/2483/393/BetterFps-1.4.8.jar"
+    "https://media.forgecdn.net/files/2845/668/foamfix-0.10.10-1.12.2.jar",
+    "https://media.forgecdn.net/files/2483/393/BetterFps-1.4.8.jar",
+	"https://media.forgecdn.net/files/2915/363/CTM-MC1.12.2-1.0.2.31.jar"
   ],
   "ForgeInstaller": "https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html"
 }
