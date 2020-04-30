@@ -1,5 +1,6 @@
 :root {
 	--menu-transition-duration: 500ms;
+	--menu-icon-size: 3em;
 }
 
 body {
@@ -22,19 +23,24 @@ body {
 	opacity: 0.7;
 }
 
-/* Drop Menu */
+/* Drop Menu Functionality */
 nav {
 	position: absolute;
 }
 
 nav span {
-	padding-right: 0.3em;
-	padding-left: 0.3em;
-	font-size: 3em;
+	display: block;
+	font-size: var(--menu-icon-size);
+	height: 1em;
+	width: 1em;
+	text-align:center;
+
+	/*Transition*/
+	transition: color var(--menu-transition-duration);
 	color: maroon;
 }
 
-nav div {
+nav .drop-menu {
 	background-color: white;
 	overflow: hidden;
 	transform-origin: top;
@@ -48,24 +54,41 @@ nav div {
 	max-height: 0;
 }
 
-nav div a {
+nav .drop-menu a {
 	text-decoration: none;
 	display: block;
 	padding: 0.75em;
 }
 
-nav div a:hover {
+nav .drop-menu a:hover {
 	background-color: lightgray;
 }
 
-nav div:hover,
-nav div:focus,
-nav span:hover + div,
-nav span:focus + div {
+nav .drop-menu:hover,
+nav .drop-menu:focus,
+nav span:hover + .drop-menu,
+nav span:focus + .drop-menu {
 	/*Transition*/
-	transition: transform var(--menu-transition-duration), 
-				opacity var(--menu-transition-duration) ease-out;
+	transition: transform var(--menu-transition-duration), opacity var(--menu-transition-duration) ease-out;
 	transform: scaleY(1);
 	opacity: 1;
 	max-height: 100%;
+}
+
+nav:hover span {
+	/*Transition*/
+	transition: color var(--menu-transition-duration);
+	color: red;
+}
+
+nav .drop-menu-void {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: var(--menu-icon-size);
+	height: var(--menu-icon-size);
+}
+
+nav .drop-menu-void:hover + span {
+	color: maroon;
 }
