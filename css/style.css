@@ -1,3 +1,7 @@
+:root {
+	--menu-transition-duration: 500ms;
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-color: #000000;
@@ -6,7 +10,9 @@ body {
 	background-repeat: no-repeat;
 	max-width: 100%;
 	max-height: 100%;
+	margin: 0;
 }
+
 .rg_logo img {
 	display: block;
 	margin-left: auto;
@@ -14,4 +20,52 @@ body {
 	max-width:80%;
 	max-height:80%;
 	opacity: 0.7;
+}
+
+/* Drop Menu */
+nav {
+	position: absolute;
+}
+
+nav span {
+	padding-right: 0.3em;
+	padding-left: 0.3em;
+	font-size: 3em;
+	color: maroon;
+}
+
+nav div {
+	background-color: white;
+	overflow: hidden;
+	transform-origin: top;
+
+	/*Transition*/
+	transition: transform var(--menu-transition-duration), 
+				opacity var(--menu-transition-duration) ease-in,
+				max-height 0ms linear var(--menu-transition-duration);
+	transform: scaleY(0);
+	opacity: 0;
+	max-height: 0;
+}
+
+nav div a {
+	text-decoration: none;
+	display: block;
+	padding: 0.75em;
+}
+
+nav div a:hover {
+	background-color: lightgray;
+}
+
+nav div:hover,
+nav div:focus,
+nav span:hover + div,
+nav span:focus + div {
+	/*Transition*/
+	transition: transform var(--menu-transition-duration), 
+				opacity var(--menu-transition-duration) ease-out;
+	transform: scaleY(1);
+	opacity: 1;
+	max-height: 100%;
 }
