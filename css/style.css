@@ -1,7 +1,31 @@
 :root {
+	--load-fade-duation: 3s;
+
 	--menu-transition-duration: 500ms;
 	--menu-icon-size: 3em;
 }
+
+@keyframes fade-in-to-70 {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.7;
+	}
+}
+
+@keyframes fade-in-to-100 {
+	from {
+		opacity: 0;
+
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 
 body {
 	background-image: url("../images/background.png");
@@ -18,14 +42,21 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width:80%;
-	max-height:80%;
+	max-width: 80%;
+	max-height: 80%;
+
+	/*Fade in*/
+	animation: fade-in-to-70 var(--load-fade-duation) linear;
 	opacity: 0.7;
 }
 
 /* Drop Menu Functionality */
 nav {
 	position: absolute;
+
+	/*Fade in*/
+	opacity: 0;
+	animation: fade-in-to-100 1s ease var(--load-fade-duation) 1 normal forwards;
 }
 
 nav span {
