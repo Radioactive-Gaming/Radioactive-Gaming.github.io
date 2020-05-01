@@ -27,12 +27,18 @@
 }
 
 
+@font-face {
+	font-family: 'Imagine Extra Slim';
+	src: url('../fonts/Imagine_Extra_Slim.ttf');
+}
+
 body {
 	background-image: url("../images/background.png");
 	background-color: #000000;
 	background-size: auto;
 	background-position: center top;
 	background-repeat: no-repeat;
+	font-family: 'Imagine Extra Slim';
 	max-width: 100%;
 	max-height: 100%;
 	margin: 0;
@@ -56,7 +62,7 @@ nav {
 
 	/*Fade in*/
 	opacity: 0;
-	animation: fade-in-to-100 1s ease var(--load-fade-duation) 1 normal forwards;
+	animation: fade-in-to-70 1s ease var(--load-fade-duation) 1 normal forwards;
 }
 
 nav span {
@@ -72,7 +78,7 @@ nav span {
 }
 
 nav .drop-menu {
-	background-color: white;
+	background: rgba(0,0,0,0.5);
 	overflow: hidden;
 	transform-origin: top;
 
@@ -81,18 +87,19 @@ nav .drop-menu {
 				opacity var(--menu-transition-duration) ease-in,
 				max-height 0ms linear var(--menu-transition-duration);
 	transform: scaleY(0);
-	opacity: 0;
+	opacity: 0.7;
 	max-height: 0;
 }
 
 nav .drop-menu a {
 	text-decoration: none;
+	color: #C1272D;
 	display: block;
 	padding: 0.75em;
 }
 
 nav .drop-menu a:hover {
-	background-color: lightgray;
+	background-color: #404040;
 }
 
 nav .drop-menu:hover,
@@ -121,5 +128,5 @@ nav .drop-menu-void {
 }
 
 nav .drop-menu-void:hover + span {
-	color: maroon;
+	color: '#C1272D';
 }
