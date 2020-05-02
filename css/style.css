@@ -1,29 +1,6 @@
 :root {
-	--load-fade-duation: 3s;
-
+	--load-fade-duration: 2s;
 	--menu-transition-duration: 500ms;
-	--menu-icon-size: 3em;
-}
-
-@keyframes fade-in-to-70 {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 0.7;
-	}
-}
-
-@keyframes fade-in-to-100 {
-	from {
-		opacity: 0;
-
-	}
-
-	to {
-		opacity: 1;
-	}
 }
 
 @font-face {
@@ -31,101 +8,98 @@
 	src: url('../fonts/Imagine_Extra_Slim.ttf');
 }
 
-body {
-	background-image: url("../images/background.png");
-	background-color: #000000;
-	background-size: auto;
-	background-position: center top;
-	background-repeat: no-repeat;
-	font-family: 'Imagine Extra Slim';
-	max-width: 100%;
-	max-height: 100%;
-	margin: 0;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+        from {opacity: 0;}
+        to {opacity: 0.7;}
 }
 
-.rg_logo img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 80%;
-	max-height: 80%;
-
-	/*Fade in*/
-	animation: fade-in-to-70 var(--load-fade-duation) linear;
-	opacity: 0.7;
+/* Standard syntax */
+@keyframes fadein {
+        from {opacity: 0;}
+        to {opacity: 0.7;}
 }
 
-/* Drop Menu Functionality */
-nav {
-	position: absolute;
-
-	/*Fade in*/
-	opacity: 0;
-	animation: fade-in-to-70 1s ease var(--load-fade-duation) 1 normal forwards;
-}
-
-nav span {
-	display: block;
-	font-size: var(--menu-icon-size);
-	height: 1em;
-	width: 1em;
-	text-align:center;
-
-	/*Transition*/
-	transition: color var(--menu-transition-duration);
-	color: maroon;
-}
-
-nav .drop-menu {
-	background: rgba(0,0,0,0.5);
+html {
 	overflow: hidden;
-	transform-origin: top;
-
-	/*Transition*/
-	transition: transform var(--menu-transition-duration), 
-				opacity var(--menu-transition-duration) ease-in,
-				max-height 0ms linear var(--menu-transition-duration);
-	transform: scaleY(0);
-	opacity: 0.7;
-	max-height: 0;
+	width: 100%;
+	height: 100%;
 }
 
-nav .drop-menu a {
+body {
+	overflow: hidden;
+	background: url('../images/background.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #000;
+}
+
+#logobackdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: drop-shadow(8px 8px 10px black);
+
+	-webkit-animation: fadein 5s ; /* Chrome, Safari, Opera */
+	animation: fadein var(--load-fade-duration) ease-in;
+	text-align:center;
+	z-index: 0;
+	opacity: 0.7;
+}
+
+#backdropimage {
+	height: 100%;
+
+}
+
+#nav {
+	color: #C1272D;
+	font-size: 40px;
+	font-family: "Imagine Extra Slim", Helvetica;
+	cursor: pointer;
+	z-index: 1;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 30px;
+	padding-bottom: 500px;
+	-webkit-animation: fadein var(--load-fade-duration) ease-in; /* Chrome, Safari, Opera */
+        animation: fadein var(--load-fade-duration) ease-in;
+}
+
+#nav a, p {
 	text-decoration: none;
 	color: #C1272D;
+	font-size: 16px;
+}
+
+#nav:hover {
+	color: #C1272D;
+	width: auto;
+}
+
+.menuitem {
+	max-height: 0;
 	display: block;
-	padding: 0.75em;
+	overflow: hidden;
 }
 
-nav .drop-menu a:hover {
-	background-color: #404040;
+.menuitem>.drop-menu {
+	max-height: 400px;
+	transition: transform 2s, opacity 2s ease-in, max-height 1.5s;
+	margin-left: 25px;
 }
 
-nav .drop-menu:hover,
-nav .drop-menu:focus,
-nav span:hover + .drop-menu,
-nav span:focus + .drop-menu {
-	/*Transition*/
-	transition: transform var(--menu-transition-duration), opacity var(--menu-transition-duration) ease-out;
-	transform: scaleY(1);
-	opacity: 1;
-	max-height: 100%;
+#nav:hover>.drop-menu>.menuitem, .menuitem:hover>.drop-menu>.menuitem {
+	max-height: 400px;
+	transition: transform 2s, opacity 2s ease-in, max-height 1.5s;
 }
 
-nav:hover span {
-	/*Transition*/
-	transition: color var(--menu-transition-duration);
-	color: red;
-}
-
-nav .drop-menu-void {
-	position: absolute;
-	right: 0;
-	top: 0;
-	left: var(--menu-icon-size);
-	height: var(--menu-icon-size);
-}
-
-nav .drop-menu-void:hover + span {
-	color: '#C1272D';
+#nav:hover .drop-menu>.menuitem:hover {
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0.7;
 }
